@@ -1,6 +1,7 @@
 import { MenuItem } from '../types';
 
 export const RESTAURANT_IMAGES = {
+  brandLogo: '/assets/aistudio/Al_Riaz_Food_Logo_a9ae0463.jpg',
   counterSign: '/assets/aistudio/Al_Riaz_Banner_b7f3c87a.jpg',
   storeFrontNight: '/assets/aistudio/Al_Riaz_Food_12f0ad7f.webp',
   royalBuffetSpread: '/assets/images/royal_buffet_spread_1794332119465.jpg',

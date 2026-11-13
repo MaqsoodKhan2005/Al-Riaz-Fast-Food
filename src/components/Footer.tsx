@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Flame } from 'lucide-react';
+import { MapPin, Phone, Clock } from 'lucide-react';
 import { RESTAURANT_COORDS } from '../utils/distance';
+import { RESTAURANT_IMAGES } from '../data/menuData';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface FooterProps {
@@ -25,8 +26,12 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-red-600 via-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md">
-                <Flame className="w-5 h-5 fill-white text-white" />
+              <div className="w-12 h-12 rounded-2xl overflow-hidden bg-[#18202c] ring-2 ring-orange-500/35 shadow-md shrink-0">
+                <img
+                  src={RESTAURANT_IMAGES.brandLogo}
+                  alt="Al Riaz Foods Official Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <span className="text-xl font-black text-slate-900 dark:text-white tracking-tight block leading-none">

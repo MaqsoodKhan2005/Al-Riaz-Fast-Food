@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ShieldCheck, Sparkles, User, Mail, MapPin } from 'lucide-react';
+import { X, ShieldCheck, User, Mail } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { RESTAURANT_IMAGES } from '../data/menuData';
 
 export const GoogleLoginModal: React.FC = () => {
   const { isLoginModalOpen, setIsLoginModalOpen, loginWithGoogle } = useAuth();
@@ -59,8 +60,12 @@ export const GoogleLoginModal: React.FC = () => {
               <X className="w-5 h-5" />
             </button>
 
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-3 shadow">
-              <Sparkles className="w-6 h-6 text-white" />
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl overflow-hidden bg-[#18202c] border-2 border-white/40 mb-3 shadow-lg">
+              <img
+                src={RESTAURANT_IMAGES.brandLogo}
+                alt="Al Riaz Foods Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-xl font-bold tracking-tight">Customer Account</h3>
             <p className="text-xs text-emerald-100 mt-1">

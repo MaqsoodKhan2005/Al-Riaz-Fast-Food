@@ -4,6 +4,7 @@ import { X, Printer, CheckCircle, MapPin, Phone, User, Bike, Clock, QrCode } fro
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { Order } from '../types';
 import { RESTAURANT_COORDS } from '../utils/distance';
+import { RESTAURANT_IMAGES } from '../data/menuData';
 
 interface OrderReceiptModalProps {
   order: Order | null;
@@ -97,7 +98,12 @@ export const OrderReceiptModal: React.FC<OrderReceiptModalProps> = ({
           <div className="p-6 sm:p-7 space-y-5 font-mono text-xs text-slate-800">
             {/* Restaurant Brand Header */}
             <div className="text-center space-y-1 border-b-2 border-dashed border-slate-300 pb-5">
-              <span className="text-[10px] font-sans font-black tracking-widest text-emerald-700 uppercase">
+              <img
+                src={RESTAURANT_IMAGES.brandLogo}
+                alt="Al Riaz Foods Official Logo"
+                className="w-14 h-14 mx-auto rounded-2xl object-cover bg-[#18202c] ring-2 ring-slate-200 mb-2 shadow-sm"
+              />
+              <span className="text-[10px] font-sans font-black tracking-widest text-emerald-700 uppercase block">
                 AL RIAZ FOODS & PAKWAN CENTER
               </span>
               <h2 className="text-xl font-sans font-black tracking-tight text-slate-900">

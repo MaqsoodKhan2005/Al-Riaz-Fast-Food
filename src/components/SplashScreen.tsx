@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Flame, Sparkles, UtensilsCrossed, ChevronRight } from 'lucide-react';
+import { Sparkles, UtensilsCrossed, ChevronRight } from 'lucide-react';
+import { RESTAURANT_IMAGES } from '../data/menuData';
 
 interface SplashScreenProps {
   onComplete?: () => void;
@@ -169,26 +170,21 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({
                 }}
                 className="relative"
               >
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-red-600 via-orange-500 to-amber-400 p-0.5 shadow-2xl shadow-orange-500/35">
-                  <div className="w-full h-full rounded-[22px] bg-white dark:bg-slate-950 flex flex-col items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 to-transparent" />
-                    <motion.div
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-tr from-red-600 via-orange-500 to-amber-400 p-1 shadow-2xl shadow-orange-500/40">
+                  <div className="w-full h-full rounded-[20px] bg-[#18202c] overflow-hidden flex items-center justify-center relative">
+                    <motion.img
+                      src={RESTAURANT_IMAGES.brandLogo}
+                      alt="Al Riaz Foods Official Logo"
                       animate={{
-                        scale: [1, 1.14, 1],
-                        rotate: [0, -4, 4, 0],
+                        scale: [1, 1.06, 1],
                       }}
                       transition={{
                         repeat: Infinity,
-                        duration: 1.6,
+                        duration: 1.8,
                         ease: 'easeInOut',
                       }}
-                      className="relative z-10 flex items-center justify-center text-orange-500"
-                    >
-                      <Flame className="w-12 h-12 text-orange-500 fill-orange-500 drop-shadow-[0_0_14px_rgba(249,115,22,0.75)]" />
-                    </motion.div>
-                    <span className="relative z-10 text-[10px] font-black tracking-widest text-orange-600 dark:text-amber-400 uppercase mt-1">
-                      AL RIAZ
-                    </span>
+                      className="w-full h-full object-cover relative z-10"
+                    />
                   </div>
                 </div>
               </motion.div>

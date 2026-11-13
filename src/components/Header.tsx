@@ -1,9 +1,10 @@
 import React from 'react';
-import { ShoppingBag, Sun, Moon, Search, Clock, Phone, Flame, Utensils } from 'lucide-react';
+import { ShoppingBag, Sun, Moon, Search, Clock, Phone } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import { RESTAURANT_COORDS } from '../utils/distance';
+import { RESTAURANT_IMAGES } from '../data/menuData';
 
 interface HeaderProps {
   onSearchClick: () => void;
@@ -58,8 +59,12 @@ export const Header: React.FC<HeaderProps> = ({ onSearchClick }) => {
           {/* Brand Logo Lockup */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a href="#" className="flex items-center gap-2 sm:gap-3 group">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-600 via-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md shadow-orange-500/25 group-hover:scale-105 transition-transform shrink-0">
-                <Flame className="w-5 h-5 sm:w-6 sm:h-6 fill-white text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl overflow-hidden bg-[#18202c] ring-2 ring-orange-500/40 shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
+                <img
+                  src={RESTAURANT_IMAGES.brandLogo}
+                  alt="Al Riaz Foods Official Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="flex flex-col">
