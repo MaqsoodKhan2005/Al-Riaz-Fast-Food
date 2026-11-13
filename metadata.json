@@ -1,0 +1,6 @@
+{
+  "name": "Al Riaz Foods - BBQ & Fast Food",
+  "description": "Premium online ordering website for Al Riaz Foods featuring fast food, gourmet pizzas, BBQ platters, real-time location distance delivery calculator, and order tracking.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
